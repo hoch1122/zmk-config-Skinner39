@@ -47,10 +47,10 @@
 
         symbol_layer {
             bindings = <
-  &kp QUESTION    &trans         &kp INT_YEN  &trans  &trans                    &trans  &kp UNDER  &trans     &trans  &kp PERCENT
-  &kp LEFT_BRACE  &kp LG(LS(S))  &kp DOLLAR   &trans  &trans                    &trans  &kp J      &kp EQUAL  &trans  &trans
-  &trans          &trans         &trans       &trans  &kp EXCL                  &trans  &trans     &trans     &trans  &trans
-  &trans          &trans         &trans       &trans  &trans    &trans  &trans  &trans                                &trans
+  &kp QUESTION    &trans         &kp INT_YEN  &trans  &trans                    &trans  &kp UNDER  &trans         &trans  &kp PERCENT
+  &kp LEFT_BRACE  &kp LG(LS(S))  &kp DOLLAR   &trans  &trans                    &trans  &kp J      &kp LS(EQUAL)  &trans  &trans
+  &trans          &trans         &trans       &trans  &kp EXCL                  &trans  &trans     &trans         &trans  &trans
+  &trans          &trans         &trans       &trans  &trans    &trans  &trans  &trans                                    &trans
             >;
         };
 
