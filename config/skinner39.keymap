@@ -40,17 +40,17 @@
             bindings = <
   &kp TAB         &trans     &kp UP_ARROW    &kp LC(C)        &kp LC(V)                     &kp SLASH   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RS(APOS)
   &kp LEFT_SHIFT  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL                     &kp MINUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS
-  &kp LC(Z)       &kp LC(X)  &kp LC(C)       &kp LC(V)        &kp DEL                       &kp PERIOD  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp CARET
+  &kp LC(Z)       &kp LC(X)  &kp LC(C)       &kp LC(V)        &kp DEL                       &kp PERIOD  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp APOS
   &trans          &trans     &trans          &trans           &trans     &trans  &kp UNDER  &kp N0                                                &kp KP_NUMLOCK
             >;
         };
 
         symbol_layer {
             bindings = <
-  &kp QUESTION    &trans         &kp INT_YEN  &trans  &trans                    &trans  &kp APOSTROPHE  &trans         &trans  &kp PERCENT
-  &kp LEFT_BRACE  &kp LG(LS(S))  &kp DOLLAR   &trans  &trans                    &trans  &kp J           &kp LS(EQUAL)  &trans  &trans
-  &trans          &trans         &trans       &trans  &kp EXCL                  &trans  &trans          &trans         &trans  &trans
-  &trans          &trans         &trans       &trans  &trans    &trans  &trans  &trans                                         &trans
+  &kp QUESTION    &trans         &kp INT_YEN  &trans  &trans                    &trans  &kp APOSTROPHE  &trans    &trans  &kp PERCENT
+  &kp LEFT_BRACE  &kp LG(LS(S))  &kp DOLLAR   &trans  &trans                    &trans  &kp J           &kp PLUS  &trans  &trans
+  &trans          &trans         &trans       &trans  &kp EXCL                  &trans  &trans          &trans    &trans  &trans
+  &trans          &trans         &trans       &trans  &trans    &trans  &trans  &trans                                    &trans
             >;
         };
 
