@@ -29,10 +29,10 @@
 
         default_layer {
             bindings = <
-  &lt 5 Q       &kp W         &kp E                &kp R             &kp T                                            &kp Y            &kp U      &kp I      &kp O       &kp P
-  &kp A         &kp S         &kp D                &lt 3 F           &kp G                                            &kp H            &mkp LCLK  &kp K      &kp L       &kp ENTER
-  &kp Z         &kp X         &kp C                &kp V             &kp B                                            &kp N            &kp M      &kp COMMA  &kp PERIOD  &kp MINUS
-  &kp LG(LEFT)  &kp LEFT_ALT  &mt LEFT_WIN ESCAPE  &lt 2 LANGUAGE_5  &lt 1 INT_KANA  &lt 4 F10  &mt INT_HENKAN SPACE  &lt 2 BACKSPACE                                    &kp RG(RIGHT)
+  &lt 5 Q       &kp W         &kp E                &kp R             &kp T                                            &kp Y          &kp U      &kp I      &kp O       &kp P
+  &kp A         &kp S         &kp D                &lt 3 F           &kp G                                            &kp H          &mkp LCLK  &kp K      &kp L       &kp ENTER
+  &kp Z         &kp X         &kp C                &kp V             &kp B                                            &kp N          &kp M      &kp COMMA  &kp PERIOD  &kp MINUS
+  &kp LG(LEFT)  &kp LEFT_ALT  &mt LEFT_WIN ESCAPE  &lt 2 LANGUAGE_2  &lt 1 INT_KANA  &lt 4 F10  &mt INT_HENKAN SPACE  &kp BACKSPACE                                    &kp RG(RIGHT)
             >;
         };
 
@@ -41,16 +41,16 @@
   &kp TAB         &trans     &kp UP_ARROW    &kp LC(C)        &kp LC(V)                     &kp SLASH   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTRK
   &kp LEFT_SHIFT  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL                     &kp MINUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS
   &kp LC(Z)       &kp LC(X)  &kp LC(C)       &kp LC(V)        &kp DEL                       &kp PERIOD  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp CARET
-  &trans          &trans     &trans          &trans           &trans     &trans  &kp EQUAL  &kp N0                                                &kp KP_NUMLOCK
+  &trans          &trans     &trans          &trans           &trans     &trans  &kp UNDER  &kp N0                                                &kp KP_NUMLOCK
             >;
         };
 
         symbol_layer {
             bindings = <
-  &kp QUESTION  &trans         &kp INT_YEN  &trans  &trans                    &trans  &kp UNDER  &trans     &trans  &kp PERCENT
-  &kp AT_SIGN   &kp LG(LS(S))  &kp DOLLAR   &trans  &trans                    &trans  &kp J      &kp TILDE  &trans  &trans
-  &trans        &trans         &trans       &trans  &kp EXCL                  &trans  &trans     &trans     &trans  &trans
-  &trans        &trans         &trans       &trans  &trans    &trans  &trans  &trans                                &trans
+  &kp QUESTION    &trans         &kp INT_YEN  &trans  &trans                    &trans  &kp UNDER  &trans     &trans  &kp PERCENT
+  &kp LEFT_BRACE  &kp LG(LS(S))  &kp DOLLAR   &trans  &trans                    &trans  &kp J      &kp EQUAL  &trans  &trans
+  &trans          &trans         &trans       &trans  &kp EXCL                  &trans  &trans     &trans     &trans  &trans
+  &trans          &trans         &trans       &trans  &trans    &trans  &trans  &trans                                &trans
             >;
         };
 
