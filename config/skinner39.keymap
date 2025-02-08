@@ -47,10 +47,10 @@
 
         symbol_layer {
             bindings = <
-  &kp QUESTION      &trans         &kp INT_YEN    &trans  &trans                    &trans  &kp RS(INT_RO)  &trans     &trans  &kp PERCENT
-  &kp LEFT_BRACKET  &kp LG(LS(S))  &kp DOLLAR     &trans  &trans                    &trans  &kp J           &kp EQUAL  &trans  &trans
-  &kp LS(KP_PLUS)   &kp TILDE2     &kp LS(EQUAL)  &trans  &kp EXCL                  &trans  &trans          &trans     &trans  &trans
-  &kp KP_PLUS       &kp LS(EQUAL)  &trans         &trans  &trans    &trans  &trans  &trans                                     &trans
+  &kp QUESTION      &trans         &kp INT_YEN  &trans  &trans                    &kp PERCENT  &kp RS(INT_RO)  &trans         &trans  &kp EQUAL
+  &kp LEFT_BRACKET  &kp LG(LS(S))  &kp DOLLAR   &trans  &trans                    &trans       &kp J           &kp LS(EQUAL)  &trans  &trans
+  &trans            &trans         &trans       &trans  &kp EXCL                  &trans       &trans          &trans         &trans  &trans
+  &trans            &trans         &trans       &trans  &trans    &trans  &trans  &trans                                              &trans
             >;
         };
 
@@ -65,10 +65,10 @@
 
         mouse_layer {
             bindings = <
-  &kp N1          &kp N2          &kp N3        &kp N4     &kp N5                  &kp N6         &kp N7     &kp N8     &kp N9     &kp N0
-  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans                  &kp PAGE_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MCLK
-  &trans          &trans          &trans        &trans     &trans                  &kp PAGE_DOWN  &trans     &trans     &trans     &trans
-  &trans          &trans          &trans        &trans     &trans  &trans  &trans  &trans                                          &trans
+  &trans  &trans  &trans  &trans  &trans                  &trans         &trans     &trans     &trans     &trans
+  &trans  &trans  &trans  &trans  &trans                  &kp PAGE_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
+  &trans  &trans  &trans  &trans  &trans                  &kp PAGE_DOWN  &trans     &trans     &trans     &trans
+  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                          &trans
             >;
         };
 
