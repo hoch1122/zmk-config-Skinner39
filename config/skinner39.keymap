@@ -50,14 +50,14 @@
 
         default_layer {
             bindings = <
-  &lt 5 Q                &kp W         &kp E                &kp R             &kp T                                              &kp Y          &kp U      &kp I      &kp O       &kp P
+  &lt 6 Q                &kp W         &kp E                &kp R             &kp T                                              &kp Y          &kp U      &kp I      &kp O       &kp P
   &a_shift LEFT_SHIFT A  &kp S         &kp D                &lt 3 F           &a_shift LCTRL G                                   &kp H          &mkp LCLK  &kp K      &kp L       &kp ENTER
   &kp Z                  &kp X         &kp C                &kp V             &kp B                                              &kp N          &kp M      &kp COMMA  &kp PERIOD  &kp MINUS
   &kp LG(LEFT)           &kp LEFT_ALT  &mt LEFT_WIN ESCAPE  &lt 2 LANGUAGE_2  &lt 1 INT_KANA    &lt 4 F10  &mt INT_HENKAN SPACE  &kp BACKSPACE                                    &kp RG(RIGHT)
             >;
         };
 
-        number_layer {
+        scroll_layer {
             bindings = <
   &kp TAB         &trans         &kp UP_ARROW    &kp LC(C)        &kp LC(V)                     &kp SLASH   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RS(APOS)
   &kp LEFT_SHIFT  &kp LEFT       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL                     &kp MINUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_PLUS
@@ -93,7 +93,7 @@
             >;
         };
 
-        scroll_layer {
+        scroll_layer2 {
             bindings = <
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
