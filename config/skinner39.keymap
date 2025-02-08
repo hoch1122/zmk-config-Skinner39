@@ -24,15 +24,36 @@
         };
     };
 
+    macros {
+        kore: pass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp S &kp O &kp C &kp C &kp E &kp R &kp H>;
+            label = "PASS";
+        };
+    };
+
+    behaviors {
+        a_shift: a_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "A_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-  &lt 5 Q       &kp W         &kp E                &kp R             &kp T                                            &kp Y          &kp U      &kp I      &kp O       &kp P
-  &kp A         &kp S         &kp D                &lt 3 F           &kp G                                            &kp H          &mkp LCLK  &kp K      &kp L       &kp ENTER
-  &kp Z         &kp X         &kp C                &kp V             &kp B                                            &kp N          &kp M      &kp COMMA  &kp PERIOD  &kp MINUS
-  &kp LG(LEFT)  &kp LEFT_ALT  &mt LEFT_WIN ESCAPE  &lt 2 LANGUAGE_2  &lt 1 INT_KANA  &lt 4 F10  &mt INT_HENKAN SPACE  &kp BACKSPACE                                    &kp RG(RIGHT)
+  &lt 5 Q                &kp W         &kp E                &kp R             &kp T                                              &kp Y          &kp U      &kp I      &kp O       &kp P
+  &a_shift LEFT_SHIFT A  &kp S         &kp D                &lt 3 F           &a_shift LCTRL G                                   &kp H          &mkp LCLK  &kp K      &kp L       &kp ENTER
+  &kp Z                  &kp X         &kp C                &kp V             &kp B                                              &kp N          &kp M      &kp COMMA  &kp PERIOD  &kp MINUS
+  &kp LG(LEFT)           &kp LEFT_ALT  &mt LEFT_WIN ESCAPE  &lt 2 LANGUAGE_2  &lt 1 INT_KANA    &lt 4 F10  &mt INT_HENKAN SPACE  &kp BACKSPACE                                    &kp RG(RIGHT)
             >;
         };
 
@@ -56,7 +77,7 @@
 
         function_layer {
             bindings = <
-  &trans     &trans  &trans  &trans  &trans                  &trans      &kp F7  &kp F8  &kp F9  &trans
+  &trans     &trans  &trans  &trans  &trans                  &trans      &kp F7  &kp F8  &kp F9  &kore
   &kp LC(Z)  &trans  &trans  &trans  &trans                  &bt BT_PRV  &kp F4  &kp F5  &kp F6  &kp RC(Y)
   &trans     &trans  &trans  &trans  &trans                  &bt BT_NXT  &kp F1  &kp F2  &kp F3  &trans
   &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans                              &trans
