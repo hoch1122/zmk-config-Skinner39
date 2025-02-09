@@ -73,10 +73,10 @@ nice_view_spi: &spi2 {
 	status = "okay";
 
 	// when layer 2 is active, the trackball will act as a mouse wheel
- scroller {
-  layers = <5>;
-  input-processors = <&zip_xy_to_scroll_mapper>;
- };
+scroller {
+    layers = <5>;
+    input-processors = <&zip_xy_to_scroll_mapper_with_inverted_y>;
+};
 	// default when layer 5 is active, the trackball will move more slowly
 		snipe {
 		layers =<6>;
