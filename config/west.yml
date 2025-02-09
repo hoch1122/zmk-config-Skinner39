@@ -18,7 +18,7 @@ manifest:
       remote: badjeff
       revision: main
     - name: zmk-input-behavior-listener
-      remote: badjeff
+      remote: inorichi
       revision: main
     - name: zmk-lpm009m360a-driver
       remote: yangxing
