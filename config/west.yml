@@ -12,13 +12,13 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: inorichi
       revision: main
     - name: zmk-split-peripheral-input-relay
       remote: badjeff
       revision: main
     - name: zmk-input-behavior-listener
-      remote: inorichi
+      remote: badjeff
       revision: main
     - name: zmk-lpm009m360a-driver
       remote: yangxing
