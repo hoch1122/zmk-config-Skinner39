@@ -80,6 +80,7 @@ nice_view_spi: &spi2 {
 
     // transform settings (反転処理を追加)
     zip_scroll_transform {
+        compatible = "zmk,input-processor-transform";
         invert-y = <1>;  // Y軸を反転
     };
 };
