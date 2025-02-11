@@ -71,15 +71,14 @@ nice_view_spi: &spi2 {
 };
 
 input_processors {
-        y_only_scroll_transform: y_only_scroll_transform {
-            compatible = "zmk,input-processor-transform";
-            #input-processor-cells = <1>;
-            type = <INPUT_EV_REL>;               // 相対入力イベントを処理
-            y-codes = <INPUT_REL_Y>;             // Y軸のイベントのみ処理
-            x-codes = <>;                        // X軸のイベントは無視
-        };
+    y_only_scroll_transform: y_only_scroll_transform {
+        compatible = "zmk,input-processor-transform";
+        #input-processor-cells = <1>;
+        type = <INPUT_EV_REL>;         // 相対入力イベントを処理
+        y-codes = <INPUT_REL_Y>;       // Y軸のイベントのみ処理
+        // x-codes の指定を削除
     };
-}
+};
 
 
 &pmw_listener {
