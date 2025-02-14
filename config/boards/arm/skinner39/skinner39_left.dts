@@ -2,7 +2,6 @@
 #include <dt-bindings/led/led.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &pinctrl {
     spi2_default: spi2_default {
@@ -70,15 +69,7 @@ nice_view_spi: &spi2 {
     };
 };
 
-input_processors {
-    y_only_scroll_transform: y_only_scroll_transform {
-        compatible = "zmk,input-processor-transform";
-        #input-processor-cells = <1>;
-        type = <INPUT_EV_REL>;         // 相対入力イベントを処理
-        y-codes = <INPUT_REL_Y>;       // Y軸のイベントのみ処理
-        // x-codes の指定を削除
-    };
-};
+
 
 
 &pmw_listener {
@@ -89,7 +80,6 @@ scroller {
     layers = <5>;
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)  // Y軸の反転
-        &y_only_scroll_transform                      // Y軸だけのスクロールを有効化
         &zip_scroll_scaler 1 20                       // スクロール速度を変更
         &zip_xy_to_scroll_mapper
     >;
