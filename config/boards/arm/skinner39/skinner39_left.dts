@@ -79,10 +79,10 @@ nice_view_spi: &spi2 {
 scroller {
     layers = <5>;
     input-processors = <
-        &zip_x_scaler 0 1
         &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)  // Y軸の反転
+        &zip_x_scaler 0 1
         &zip_xy_to_scroll_mapper
-        &zip_scroll_scaler 1 75                       // スクロール速度を変更
+        &zip_scroll_scaler 1 30                       // スクロール速度を変更
     >;
 };
 
