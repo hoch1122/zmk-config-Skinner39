@@ -80,7 +80,7 @@ scroller {
     layers = <5>;
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)  // Y軸の反転
-        &zip_scroll_scaler 1 25                       // スクロール速度を変更
+        &zip_scroll_scaler 1 75                       // スクロール速度を変更
         &zip_xy_to_scroll_mapper
     >;
 };
