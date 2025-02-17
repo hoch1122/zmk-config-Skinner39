@@ -76,7 +76,7 @@ nice_view_spi: &spi2 {
     status = "okay";
 
     // when layer 5 is active, the trackball will act as a mouse wheel
-scroller {
+scroller_vertical {
     layers = <5>;
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)  // Y軸の反転
