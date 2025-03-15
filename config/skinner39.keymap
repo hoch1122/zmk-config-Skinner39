@@ -95,19 +95,19 @@
 
         function_layer {
             bindings = <
-  &trans     &trans  &trans  &trans  &trans                  &trans      &kp F7  &kp F8  &kp F9  &kore
-  &kp LC(Z)  &trans  &trans  &trans  &trans                  &bt BT_PRV  &kp F4  &kp F5  &kp F6  &kp RC(Y)
-  &trans     &trans  &trans  &trans  &trans                  &bt BT_NXT  &kp F1  &kp F2  &kp F3  &trans
-  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans                              &trans
+  &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans      &kp F7  &kp F8  &kp F9  &kp LG(TAB)
+  &kp LC(LG(LEFT))  &trans        &trans        &trans        &trans                        &bt BT_PRV  &kp F4  &kp F5  &kp F6  &kp RC(LG(RIGHT))
+  &trans            &trans        &trans        &trans        &trans                        &bt BT_NXT  &kp F1  &kp F2  &kp F3  &trans
+  &kp LC(Z)         &trans        &trans        &trans        &trans        &trans  &trans  &trans                              &kp RC(Y)
             >;
         };
 
         scroll_layer {
             bindings = <
-  &kp TAB         &trans         &kp UP_ARROW    &kp LC(C)        &kp LC(V)                     &kp SLASH   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RS(APOS)
-  &kp LEFT_SHIFT  &kp LEFT       &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL                     &kp MINUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_PLUS
-  &kp LC(Z)       &kp LC(EQUAL)  &kp LC(C)       &kp LC(V)        &kp DEL                       &kp PERIOD  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp APOS
-  &trans          &trans         &trans          &trans           &trans     &trans  &kp UNDER  &kp N0                                                &kp KP_NUMLOCK
+  &kp TAB         &trans     &kp UP_ARROW    &kp LC(C)        &kp LC(V)                     &kp SLASH   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RS(APOS)
+  &kp LEFT_SHIFT  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL                     &kp MINUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_PLUS
+  &kp LC(Z)       &kp LC(X)  &kp LC(C)       &kp LC(V)        &kp DEL                       &kp PERIOD  &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp APOS
+  &trans          &trans     &trans          &trans           &trans     &trans  &kp UNDER  &kp N0                                                &kp KP_NUMLOCK
             >;
         };
 
