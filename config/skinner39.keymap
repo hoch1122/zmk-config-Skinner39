@@ -97,7 +97,7 @@
             bindings = <
   &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans      &kp F7  &kp F8  &kp F9  &kp LG(TAB)
   &kp LC(LG(LEFT))  &trans        &trans        &trans        &trans                        &bt BT_PRV  &kp F4  &kp F5  &kp F6  &kp RC(LG(RIGHT))
-  &trans            &trans        &trans        &trans        &trans                        &bt BT_NXT  &kp F1  &kp F2  &kp F3  &trans
+  &kp LA(LEFT)      &trans        &trans        &trans        &trans                        &bt BT_NXT  &kp F1  &kp F2  &kp F3  &kp RA(RIGHT)
   &kp LC(Z)         &trans        &trans        &trans        &trans        &trans  &trans  &trans                              &kp RC(Y)
             >;
         };
