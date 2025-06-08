@@ -120,10 +120,10 @@
 
         mouse_layer {
             bindings = <
-  &trans         &trans        &kp LS(UP_ARROW)    &trans         &trans                             &trans  &trans   &trans    &trans  &trans
-  &kp LS(LC(B))  &kp LS(LEFT)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT)  &kp LC(PG_UP)                      &trans  &kaiten  &mkp MB3  &zoom   &trans
-  &trans         &trans        &trans              &trans         &kp LC(PAGE_DOWN)                  &trans  &trans   &trans    &trans  &trans
-  &kp LC(B)      &trans        &trans              &trans         &trans             &trans  &trans  &trans                             &kp LS(LC(B))
+  &trans         &trans        &kp LS(UP_ARROW)    &trans         &trans                             &trans         &trans   &trans    &trans  &trans
+  &kp LS(LC(B))  &kp LS(LEFT)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT)  &kp LC(PG_UP)                      &kp PG_UP      &kaiten  &mkp MB3  &zoom   &trans
+  &trans         &trans        &trans              &trans         &kp LC(PAGE_DOWN)                  &kp PAGE_DOWN  &trans   &trans    &trans  &trans
+  &kp LC(B)      &trans        &trans              &trans         &trans             &trans  &trans  &trans                                    &kp LS(LC(B))
             >;
         };
 
