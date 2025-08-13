@@ -95,7 +95,7 @@ nice_view_spi: &spi2 {
 
     /* ★レイヤー4：スナイプ（精密エイム用の減速） */
     snipe {
-        layers = <4>;
+        layers = <2>;
         input-processors = <
             &zip_xy_scaler     1 3   /* ポインタ移動を1/3に（まずはコレがおすすめ） */
             &zip_scroll_scaler 1 2   /* スクロールも半分（不要ならこの行は削除OK） */
