@@ -9,7 +9,7 @@
 
         aa {
             bindings = <&bt BT_CLR>;
-            key-positions = <38 30>;
+            key-positions = <20 29>;
             timeout-ms = <20>;
             require-prior-idle-ms = <20>;
             layers = <4>;
