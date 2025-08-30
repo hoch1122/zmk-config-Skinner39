@@ -144,10 +144,10 @@
 
         SNIPE {
             bindings = <
-  &trans          &trans  &trans  &trans  &trans                            &trans  &trans     &trans     &trans     &trans
-  &kp LEFT_SHIFT  &trans  &trans  &trans  &kp LEFT_CONTROL                  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
-  &trans          &trans  &trans  &trans  &trans                            &trans  &trans     &trans     &trans     &trans
-  &trans          &trans  &trans  &trans  &trans            &trans  &trans  &trans                                   &trans
+  &trans          &trans  &trans  &trans  &trans                            &trans  &kp LG(UP_ARROW)  &trans     &trans     &trans
+  &kp LEFT_SHIFT  &trans  &trans  &trans  &kp LEFT_CONTROL                  &trans  &mkp LCLK         &mkp MCLK  &mkp RCLK  &trans
+  &trans          &trans  &trans  &trans  &trans                            &trans  &kp LG(DOWN)      &trans     &trans     &trans
+  &trans          &trans  &trans  &trans  &trans            &trans  &trans  &trans                                          &trans
             >;
         };
     };
