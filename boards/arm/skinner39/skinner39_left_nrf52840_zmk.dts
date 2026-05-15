@@ -69,7 +69,7 @@ nice_view_spi: &spi2 {
             &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)
             &zip_x_scaler 0 1
             &zip_xy_to_scroll_mapper
-            &zip_scroll_scaler 1 15
+            &zip_scroll_scaler 1 8
         >;
     };
 
@@ -78,7 +78,7 @@ nice_view_spi: &spi2 {
         input-processors = <
             &zip_y_scaler 0 1
             &zip_xy_to_scroll_mapper
-            &zip_scroll_scaler 1 50
+            &zip_scroll_scaler 1 20
         >;
     };
 
