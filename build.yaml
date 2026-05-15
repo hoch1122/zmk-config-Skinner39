@@ -1,8 +1,7 @@
 ---
 include:
-  - board: skinner39_left
+  - board: skinner39_left//zmk
     shield: nice_view
     snippet: studio-rpc-usb-uart
-  - board: skinner39_right
+  - board: skinner39_right//zmk
     shield: nice_view
-
