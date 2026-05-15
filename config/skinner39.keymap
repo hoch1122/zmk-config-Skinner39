@@ -10,19 +10,23 @@
         aa {
             bindings = <&bt BT_CLR>;
             key-positions = <30 38>;
-            timeout-ms = <20>;
-            require-prior-idle-ms = <20>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <500>;
             layers = <4>;
         };
 
         ss {
             bindings = <&bootloader>;
             key-positions = <38 9 19>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <500>;
         };
 
         sr {
             bindings = <&bootloader>;
             key-positions = <0 10 30>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <500>;
         };
 
         winlock {
