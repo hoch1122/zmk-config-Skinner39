@@ -1,0 +1,13 @@
+boards:
+  - name: skinner39_left
+    vendor: hoch1122
+    socs:
+      - name: nrf52840
+        variants:
+          - name: zmk
+  - name: skinner39_right
+    vendor: hoch1122
+    socs:
+      - name: nrf52840
+        variants:
+          - name: zmk

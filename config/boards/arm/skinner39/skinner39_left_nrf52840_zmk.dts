@@ -60,11 +60,9 @@ nice_view_spi: &spi2 {
     };
 };
 
-/* ===== TrackballのInput Listener（既存）にスナイプを追加 ===== */
 &pmw_listener {
     status = "okay";
 
-    /* レイヤー5：垂直スクロール（Y反転、Xは無効化→スクロール化） */
     scroller_vertical {
         layers = <2>;
         input-processors = <
@@ -75,7 +73,6 @@ nice_view_spi: &spi2 {
         >;
     };
 
-    /* レイヤー1：水平スクロール（Yを無効化→スクロール化） */
     scroller_horizon {
         layers = <1>;
         input-processors = <
@@ -85,16 +82,10 @@ nice_view_spi: &spi2 {
         >;
     };
 
-    /* ★レイヤー4：スナイプ（精密エイム用の減速） */
     snipe {
         layers = <5>;
         input-processors = <
-            &zip_xy_scaler     1 4   /* ポインタ移動倍率 */
+            &zip_xy_scaler     1 4
         >;
     };
-
-    /* 例：トラックボール使用中だけ一時的にレイヤーを上げたい時
-     * input-processors = <&zip_temp_layer 4 2000>;
-     * （今回は使わないのでそのままコメントアウトでOK）
-     */
 };
