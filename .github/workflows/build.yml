@@ -5,6 +5,7 @@ on:
     paths:
       - config/**
       - build.yaml
+      - zephyr/**
 
 jobs:
   build:
