@@ -1,4 +1,5 @@
 ---
+# trigger rebuild
 include:
   # --- Studio なし（通常使用・安定版） ---
   - board: skinner39_left//zmk
