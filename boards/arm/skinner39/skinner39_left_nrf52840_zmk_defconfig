@@ -27,9 +27,6 @@ CONFIG_ZMK_USB=y
 CONFIG_ZMK_BLE=y
 CONFIG_ZMK_SLEEP=n
 
-# BLE接続時フリーズ対策：Zephyr PMを無効化
-CONFIG_PM=n
-CONFIG_PM_DEVICE=n
 # Studio を使う時は下2行のコメントを外す（build.yaml の snippet 切り替えも忘れずに）
 CONFIG_ZMK_STUDIO=y
 CONFIG_ZMK_STUDIO_LOCKING=n
