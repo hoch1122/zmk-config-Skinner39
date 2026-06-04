@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: bigwhale
+      url-base: https://github.com/BigWhale
   projects:
     - name: zmk
-      remote: zmk
-      revision: main
+      remote: bigwhale
+      revision: fix/deep-sleep-wake-central
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: badjeff
