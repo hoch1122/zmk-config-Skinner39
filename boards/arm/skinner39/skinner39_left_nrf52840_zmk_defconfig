@@ -27,6 +27,10 @@ CONFIG_ZMK_USB=y
 CONFIG_ZMK_BLE=y
 CONFIG_ZMK_SLEEP=y
 
+# 2026-06-05: PC側BTオフ→オン再接続時のフリーズ対策（候補1/Windows再接続安定化）
+# 効かなければ戻して CONFIG_ZMK_BLE_EXPERIMENTAL_FEATURES=y を試す
+CONFIG_BT_CTLR_PHY_2M=n
+
 # Studio を使う時は下2行のコメントを外す（build.yaml の snippet 切り替えも忘れずに）
 CONFIG_ZMK_STUDIO=y
 CONFIG_ZMK_STUDIO_LOCKING=n
