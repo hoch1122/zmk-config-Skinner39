@@ -1,11 +1,13 @@
 ---
 include:
   # --- Studio なし（通常使用・安定版） ---
-  # - board: skinner39_left//zmk
-  #   shield: nice_view
+  - board: skinner39_left//zmk
+    shield: nice_view
   - board: skinner39_right//zmk
     shield: nice_view
   # --- Studio あり（使いたい時: 上の left をコメントアウト → 下をコメントアウト解除） ---
-  - board: skinner39_left//zmk
-    shield: nice_view
-    snippet: studio-rpc-usb-uart
+  # 2026-06-07: deep sleep復帰フリーズ対策（ZMK #3195: Studio有効だとcentralがwakeしない）のため
+  # 左をStudioなしに切替。Studio使う時は下3行をコメント解除＆上のleftをコメントアウト。
+  # - board: skinner39_left//zmk
+  #   shield: nice_view
+  #   snippet: studio-rpc-usb-uart
