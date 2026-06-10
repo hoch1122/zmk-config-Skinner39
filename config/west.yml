@@ -1,18 +1,20 @@
 manifest:
   remotes:
-    - name: zmk
+    - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: badjeff
-      url-base: https://github.com/badjeff
-    - name: bigwhale
-      url-base: https://github.com/BigWhale
+    - name: hoch1122
+      url-base: https://github.com/hoch1122
   projects:
+    # 2026-06-10: Zephyr 4.1 regression（#3207/#3195: central deep sleep wake失敗）回避のため
+    # v0.3 タグに固定（Seaside39 実機と同じ構成）。v0.4.0 リリース後に更新を検討
     - name: zmk
-      remote: bigwhale
-      revision: fix/deep-sleep-wake-central
+      remote: zmkfirmware
+      revision: v0.3
       import: app/west.yml
+    # f9f611a（旧安定ファーム）当時と同一の fork。2025-02-09 から無更新＝v0.3 互換
+    # 注意: badjeff 版（pmw3610-alt）は Zephyr 4.1 向けのためこのブランチでは使わない
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: hoch1122
       revision: main
   self:
     path: config

@@ -1,7 +1,5 @@
 #include "skinner39.dtsi"
 #include <dt-bindings/led/led.h>
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
 
 &pinctrl {
     spi2_default: spi2_default {
@@ -60,32 +58,7 @@ nice_view_spi: &spi2 {
     };
 };
 
-&pmw_listener {
-    status = "okay";
-
-    scroller_vertical {
-        layers = <2>;
-        input-processors = <
-            &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)
-            &zip_x_scaler 0 1
-            &zip_xy_to_scroll_mapper
-            &zip_scroll_scaler 1 8
-        >;
-    };
-
-    scroller_horizon {
-        layers = <1>;
-        input-processors = <
-            &zip_y_scaler 0 1
-            &zip_xy_to_scroll_mapper
-            &zip_scroll_scaler 1 20
-        >;
-    };
-
-    snipe {
-        layers = <5>;
-        input-processors = <
-            &zip_xy_scaler     1 4
-        >;
-    };
-};
+/*
+ * 2026-06-10: 右central化により、左は peripheral になった。
+ * pmw_listener（トラックボール入力処理）は右(central)へ移動 → skinner39_right.dts
+ */
