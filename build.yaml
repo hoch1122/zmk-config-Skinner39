@@ -1,7 +1,7 @@
 ---
 include:
   # 2026-06-10: v0.3 + 右central構成（放置復帰フリーズ #3207/#3195 対策ブランチ）
-  # HWMv1 のためボード名にサフィックスなし。Studioスニペットなし恒久運用
+  # HWMv1 のためボード名にサフィックスなし。Studioスニペットなし恒久運用。CI: @v0.3
   - board: skinner39_left
     shield: nice_view
   - board: skinner39_right
