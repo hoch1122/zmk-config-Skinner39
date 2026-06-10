@@ -31,6 +31,10 @@ CONFIG_ZMK_SLEEP=y
 # 効かなければ戻して CONFIG_ZMK_BLE_EXPERIMENTAL_FEATURES=y を試す
 CONFIG_BT_CTLR_PHY_2M=n
 
-# Studio を使う時は下2行のコメントを外す（build.yaml の snippet 切り替えも忘れずに）
-CONFIG_ZMK_STUDIO=y
-CONFIG_ZMK_STUDIO_LOCKING=n
+# 2026-06-10: ZMK #3195 対策の本命（central が deep sleep から wake しない問題）。
+# 6/7 の「Studioなしビルド」は build.yaml の snippet を外しただけで、ここの
+# CONFIG_ZMK_STUDIO=y が生きたままだった＝Studio本体(RPC/BLE transport)は有効のままで
+# #3195 の回避策（CONFIG_ZMK_STUDIO=n）は実は未適用だった。今回明示的に無効化する。
+# Studio を使う時は下2行を =y / =n に戻す（build.yaml の snippet 切り替えも忘れずに）
+CONFIG_ZMK_STUDIO=n
+# CONFIG_ZMK_STUDIO_LOCKING=n
