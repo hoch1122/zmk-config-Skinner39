@@ -7,8 +7,7 @@ include:
   - board: skinner39_right
     shield: nice_view
   # 2026-06-12: central役入れ替えで左右間bondが矛盾し通信不能になったため追加。
-  # 両側に settings_reset を焼いて bond 全消去 → 通常ファーム焼き直しで復旧する
+  # settings_reset は左用1つで両半身に使える（同一MCU・同一パーティション。settings消去のみのため）。
+  # 右用は trackball ノードと最小構成が衝突しビルド不可なので作らない
   - board: skinner39_left
-    shield: settings_reset
-  - board: skinner39_right
     shield: settings_reset
