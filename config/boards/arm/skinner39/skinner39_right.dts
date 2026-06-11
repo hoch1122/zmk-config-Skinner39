@@ -45,10 +45,9 @@ nice_view_spi: &spi2 {
 			reg = <1>;
 			spi-max-frequency = <2000000>;
 			irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-			cpi = <1200>;
-			evt-type = <INPUT_EV_REL>;
-			x-input-code = <INPUT_REL_X>;
-			y-input-code = <INPUT_REL_Y>;
+			/* 2026-06-11: cpi/evt-type/x-input-code/y-input-code は hoch1122 fork 固有
+			 * プロパティのため削除。inorichi 版では CPI は Kconfig（CONFIG_PMW3610_CPI）、
+			 * イベント種別はドライバ内で固定 */
 	};
 };
 

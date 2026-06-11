@@ -8,6 +8,8 @@ CONFIG_PMW3610_INVERT_Y=y
 # 2026-06-10: 旧ファームは右=n だった（カクつきの一因の可能性）。y に変更。
 # トラックボールの挙動がおかしければ n に戻す
 CONFIG_PMW3610_SMART_ALGORITHM=y
+# 2026-06-11: inorichi 版は CPI を dts でなく Kconfig で設定（旧 dts の cpi = <1200> を移植）
+CONFIG_PMW3610_CPI=1200
 
 CONFIG_ZMK_EXT_POWER=y
 CONFIG_SOC_SERIES_NRF52X=y
