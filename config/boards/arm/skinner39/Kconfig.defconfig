@@ -1,10 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-# 2026-06-10: フリーズ対策で central を右（トラックボール側）に変更。
-# 動作実績のある Seaside39（hama-be 製・右central・v0.3）と同じ構成。
-# トラックボールの motion 割り込みが central の wake 源になり deep sleep 復帰が確実化する想定。
-if BOARD_SKINNER39_RIGHT
+# 2026-06-12: 右central化は実使用で問題があったため左centralに戻した（v0.3は維持）。
+# トラックボールは右(peripheral)→zmk,input-split→左(central)のBLE relay（main と同じ配線）。
+if BOARD_SKINNER39_LEFT
 
 config ZMK_KEYBOARD_NAME
 	default "SKINNER39"
@@ -12,7 +11,7 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
-endif # BOARD_SKINNER39_RIGHT
+endif # BOARD_SKINNER39_LEFT
 
 if BOARD_SKINNER39_LEFT || BOARD_SKINNER39_RIGHT
 

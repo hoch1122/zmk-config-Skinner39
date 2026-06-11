@@ -148,7 +148,24 @@ zephyr_udc0:&usbd {
 };
 
 /*
- * 2026-06-10: 右central化に伴い split_inputs(zmk,input-split) / pmw_listener を廃止。
- * トラックボールは右(central)ローカルの input-listener 直結
- * （skinner39_right.dts 参照）。BLE relay 経路を消すのが目的。
+ * 2026-06-12: 左central復帰に伴い split_inputs(zmk,input-split) / pmw_listener を復元
+ * （main と同じ配線・zmk,input-split は v0.3 にネイティブ存在）。
+ * 右(peripheral)のトラックボール入力を BLE relay で左(central)に中継する。
  */
+/ {
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        pmw_split: pmw_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    pmw_listener: pmw_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&pmw_split>;
+    };
+};
