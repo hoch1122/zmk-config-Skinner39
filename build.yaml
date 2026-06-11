@@ -1,8 +1,14 @@
 ---
 include:
-  # 2026-06-10: v0.3 + 右central構成（放置復帰フリーズ #3207/#3195 対策ブランチ）
+  # 2026-06-12: v0.3 + 左central構成（右central化はrevert済み）
   # HWMv1 のためボード名にサフィックスなし。Studioスニペットなし恒久運用。CI: @v0.3
   - board: skinner39_left
     shield: nice_view
   - board: skinner39_right
     shield: nice_view
+  # 2026-06-12: central役入れ替えで左右間bondが矛盾し通信不能になったため追加。
+  # 両側に settings_reset を焼いて bond 全消去 → 通常ファーム焼き直しで復旧する
+  - board: skinner39_left
+    shield: settings_reset
+  - board: skinner39_right
+    shield: settings_reset
