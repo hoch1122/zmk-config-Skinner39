@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: inorichi
-      url-base: https://github.com/inorichi
+    - name: badjeff
+      url-base: https://github.com/badjeff
   projects:
     # 2026-06-10: Zephyr 4.1 regression（#3207/#3195: central deep sleep wake失敗）回避のため
     # v0.3 タグに固定（Seaside39 実機と同じ構成）。v0.4.0 リリース後に更新を検討
@@ -11,10 +11,12 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    # 2026-06-11: hoch1122 fork から inorichi 版に変更（Seaside39 実機と同一ドライバ・fork管理廃止）
-    # 注意: badjeff 版（pmw3610-alt）は Zephyr 4.1 向けのためこのブランチでは使わない
+    # 2026-06-12: inorichi 版は central 専用（レイヤー参照がperipheralでリンクエラー）のため
+    # badjeff 上流（hoch1122 fork の親）を fork 時点のコミットにピン留め。
+    # peripheral 対応・f9f611a 実証コードと同一・fork 管理不要。
+    # 注意: badjeff の「pmw3610-alt」（別リポジトリ）は Zephyr 4.1 向けで、これとは別物
     - name: zmk-pmw3610-driver
-      remote: inorichi
-      revision: main
+      remote: badjeff
+      revision: e3b4a7afe717a0614579ad4d44efaf3cd7a61434
   self:
     path: config
