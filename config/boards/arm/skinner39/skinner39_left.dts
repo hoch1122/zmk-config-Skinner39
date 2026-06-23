@@ -67,11 +67,15 @@ nice_view_spi: &spi2 {
 &pmw_listener {
     status = "okay";
 
-    scroller_vertical {
+    /*
+     * 2026-06-23: layer 2 を 2D スクロール（縦＋横同時）に変更。
+     * 以前は zip_x_scaler 0 1 でX軸を殺して縦専用だったが、横スクロールも
+     * 有効化するため削除。Seaside39 の scroll 構成（両軸を mapper に通す）と一致。
+     */
+    scroller {
         layers = <2>;
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)
-            &zip_x_scaler 0 1
             &zip_xy_to_scroll_mapper
             &zip_scroll_scaler 1 8
         >;
