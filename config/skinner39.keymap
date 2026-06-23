@@ -22,6 +22,7 @@
     flavor = "balanced";
     quick-tap-ms = <300>;
     require-prior-idle-ms = <150>;
+    tapping-term-ms = <150>;  // 2026-06-23: レイヤー切替の反応を速く（既定200→150。&mtは200維持）
 };
 
 / {
@@ -109,7 +110,7 @@
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;  // 2026-06-23: &lt と揃えてレイヤー切替を速く
         };
 
         holdmkp: holdmkp {
