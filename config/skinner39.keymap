@@ -14,14 +14,12 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <300>;
-    require-prior-idle-ms = <150>;
     hold-trigger-on-release;
 };
 
 &lt {
     flavor = "balanced";
     quick-tap-ms = <300>;
-    require-prior-idle-ms = <150>;
     tapping-term-ms = <150>;  // 2026-06-23: レイヤー切替の反応を速く（既定200→150。&mtは200維持）
 };
 
