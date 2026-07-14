@@ -1,0 +1,9 @@
+# このzmk-configリポジトリ自体を、追加のZephyrモジュール（ジェスチャー用input-processor）
+# としても認識させるための宣言。実体は modules/zmk-input-processor-gesture 以下にある。
+# 2026-07-14 Skinner39 Studio連携で追加（試作・実機未検証）
+name: skinner39-config-modules
+build:
+  cmake: modules/zmk-input-processor-gesture
+  kconfig: modules/zmk-input-processor-gesture/Kconfig
+  settings:
+    dts_root: modules/zmk-input-processor-gesture

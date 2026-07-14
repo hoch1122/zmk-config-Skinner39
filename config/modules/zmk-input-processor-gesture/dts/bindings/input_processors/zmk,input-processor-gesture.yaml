@@ -1,0 +1,41 @@
+# SPDX-License-Identifier: MIT
+#
+# ボールを一方向に一定距離「弾く」動作を検知し、負方向/正方向それぞれに割り当てた
+# キー動作(bindings)を1回だけ送る入力プロセッサ。
+# 1インスタンスにつき片方の軸(X or Y)だけを見る。上下左右をカバーするには
+# X軸用・Y軸用の2インスタンスを用意して、同じinput-listenerのinput-processorsに並べる。
+#
+# 例:
+#   zip_gesture_x: zip_gesture_x {
+#       compatible = "zmk,input-processor-gesture";
+#       #input-processor-cells = <0>;
+#       type = <INPUT_EV_REL>;
+#       code = <INPUT_REL_X>;
+#       threshold = <40>;
+#       bindings = <&kp C_LEFT>, <&kp C_RIGHT>;  // [0]=負方向(左) [1]=正方向(右)
+#   };
+
+description: |
+  Detects a flick gesture (accumulated relative movement past a threshold) on a single
+  input axis and invokes one of two bound behaviors depending on direction.
+
+compatible: "zmk,input-processor-gesture"
+
+include: ip_zero_param.yaml
+
+properties:
+  type:
+    type: int
+    description: 監視するイベントタイプ（省略時はINPUT_EV_REL=2）
+  code:
+    type: int
+    required: true
+    description: 監視する軸のコード（例 INPUT_REL_X=0 / INPUT_REL_Y=1）
+  threshold:
+    type: int
+    default: 40
+    description: 累積移動量がこの値を超えたらbindingsを発火してリセットする
+  bindings:
+    type: phandle-array
+    required: true
+    description: 必ず2つ。[0]=負方向で送る動作、[1]=正方向で送る動作

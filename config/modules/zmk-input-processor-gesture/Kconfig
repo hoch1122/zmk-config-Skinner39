@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: MIT
+
+if INPUT
+
+config ZMK_INPUT_PROCESSOR_GESTURE
+    bool "Gesture input processor (flick trackball to send a keypress)"
+    default y
+    depends on DT_HAS_ZMK_INPUT_PROCESSOR_GESTURE_ENABLED
+
+endif
