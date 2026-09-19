@@ -38,35 +38,35 @@
                 &kp H>;
         };
         kaiten: kaiten {
-                            compatible = "zmk,behavior-macro";
-                            #binding-cells = <0>;
-                            bindings =
-                                <&macro_press>,
-                                <&mkp MCLK>,
-                                <&macro_wait_time 200>,
-                                <&mkp RCLK>,
-                                <&macro_pause_for_release>,
-                                <&macro_release>,
-                                <&mkp MCLK &mkp RCLK>;
+                                    compatible = "zmk,behavior-macro";
+                                    #binding-cells = <0>;
+                                    bindings =
+                                        <&macro_press>,
+                                        <&mkp MCLK>,
+                                        <&macro_wait_time 200>,
+                                        <&mkp RCLK>,
+                                        <&macro_pause_for_release>,
+                                        <&macro_release>,
+                                        <&mkp MCLK &mkp RCLK>;
 
-                            label = "KAITEN";
-                        };
+                                    label = "KAITEN";
+                                };
         zoom: zoom {
-                            compatible = "zmk,behavior-macro";
-                            #binding-cells = <0>;
-                            bindings =
-                                <&macro_press>,
-                                <&mkp MCLK>,
-                                <&macro_wait_time 100>,
-                                <&mkp RCLK>,
-                                <&macro_release>,
-                                <&mkp RCLK>,
-                                <&macro_pause_for_release>,
-                                <&macro_release>,
-                                <&mkp MCLK>;
+                                    compatible = "zmk,behavior-macro";
+                                    #binding-cells = <0>;
+                                    bindings =
+                                        <&macro_press>,
+                                        <&mkp MCLK>,
+                                        <&macro_wait_time 100>,
+                                        <&mkp RCLK>,
+                                        <&macro_release>,
+                                        <&mkp RCLK>,
+                                        <&macro_pause_for_release>,
+                                        <&macro_release>,
+                                        <&mkp MCLK>;
 
-                            label = "ZOOM";
-                        };
+                                    label = "ZOOM";
+                                };
     };
 
     combos {
@@ -99,6 +99,7 @@
     };
 
     behaviors {
+
 
         a_shift: a_shift {
             compatible = "zmk,behavior-hold-tap";
