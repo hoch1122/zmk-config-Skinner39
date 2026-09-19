@@ -43,6 +43,13 @@
         codes = <INPUT_REL_HWHEEL>;
     };
 
+    zip_xy_scaler_layer_4: zip_xy_scaler_layer_4 {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+    };
+
     zip_xy_scaler_layer_5: zip_xy_scaler_layer_5 {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
@@ -86,6 +93,13 @@
         device = <&trackball>;
         layers = <2>;
         input-processors = <&zip_xy_to_scroll>, <&zip_scroll_scaler_v_layer_2 1 8>, <&zip_scroll_scaler_h_layer_2 1 8>;
+    };
+
+    trackball_listener_layer_4 {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        layers = <4>;
+        input-processors = <&zip_xy_scaler_layer_4 1 1>;
     };
 
     trackball_listener_layer_5 {
