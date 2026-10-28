@@ -1,9 +1,10 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-# 2026-06-12: 右central化は実使用で問題があったため左centralに戻した（v0.3は維持）。
-# トラックボールは右(peripheral)→zmk,input-split→左(central)のBLE relay（main と同じ配線）。
-if BOARD_SKINNER39_LEFT
+# 2026-10-28: central を右（トラックボール側・Seaside39 と同じ）に変更。変えるのは central 役だけ
+# （v0.3・badjeff ドライバ・SLEEP=n・PHY_2M=n はそのまま）。トラックボールは右でローカル処理（BLE relay なし）。
+# 履歴: 2026-06-12 に左central に戻した（6月は v0.3化・ドライバ・central を同時に変えたので原因未切り分け）。
+if BOARD_SKINNER39_RIGHT
 
 config ZMK_KEYBOARD_NAME
 	default "SKINNER39"
@@ -11,7 +12,7 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
-endif # BOARD_SKINNER39_LEFT
+endif # BOARD_SKINNER39_RIGHT
 
 if BOARD_SKINNER39_LEFT || BOARD_SKINNER39_RIGHT
 

@@ -1,6 +1,6 @@
 ---
 include:
-  # 2026-06-12: v0.3 + 左central構成（右central化はrevert済み）
+  # 2026-10-28: v0.3 + 右central構成（central役だけ変更。USBは右挿し）
   # HWMv1 のためボード名にサフィックスなし。Studioスニペットなし恒久運用。CI: @v0.3
   - board: skinner39_left
     shield: nice_view
