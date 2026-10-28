@@ -43,3 +43,11 @@ CONFIG_BT_CTLR_PHY_2M=n
 
 # 2026-10-25: 左と同じく deep sleep を明示的に切る（放置フリーズの切り分け）
 CONFIG_ZMK_SLEEP=n
+
+# 2026-10-28: config/trackball_settings.conf はボード名不一致でビルドに入っていなかった。
+# その中で今のドライバ（badjeff@e3b4a7a）が受け付ける省電力の2項目だけをここへ移す。
+# CPI は dts（cpi = <1200>）、POLLING_RATE_400_SW と RGBLED_WIDGET はこのドライバ/構成に無い項目なので入れない
+# 動かし始めてから3.2秒は全速のまま（既定128ms）。少し止めてから動かしたときの引っかかりを減らす
+CONFIG_PMW3610_RUN_DOWNSHIFT_TIME_MS=3264
+# 休みに入った直後の見回り間隔を短く（既定40ms）。動かし始めの反応を速く
+CONFIG_PMW3610_REST1_SAMPLE_TIME_MS=20
