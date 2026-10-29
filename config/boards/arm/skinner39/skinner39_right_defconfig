@@ -51,3 +51,7 @@ CONFIG_ZMK_SLEEP=n
 CONFIG_PMW3610_RUN_DOWNSHIFT_TIME_MS=3264
 # 休みに入った直後の見回り間隔を短く（既定40ms）。動かし始めの反応を速く
 CONFIG_PMW3610_REST1_SAMPLE_TIME_MS=20
+
+# 2026-10-30: 既定0＝動くたびに即報告し、BLE の接続間隔（7.5〜15ms）より速くて mouse report の送信待ち（20個）が詰まる。
+# 8ms ごとに足し合わせて1回送る（Seaside39 の POLLING_RATE_125_SW と同じ間隔）
+CONFIG_PMW3610_REPORT_INTERVAL_MIN=8
